@@ -42,6 +42,8 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'devise-i18n', '~> 1.6', '>= 1.6.4'
+gem 'omniauth-facebook', '~> 5.0'
+gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

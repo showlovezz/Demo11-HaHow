@@ -44,6 +44,8 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'devise-i18n', '~> 1.6', '>= 1.6.4'
 gem 'omniauth-facebook', '~> 5.0'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'rails_admin', '~> 1.4'
+gem 'whenever', '~> 0.10.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

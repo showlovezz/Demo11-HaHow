@@ -34,3 +34,4 @@
 yarn-debug.log*
 .yarn-integrity
 /config/email.yml
+/config/database.yml

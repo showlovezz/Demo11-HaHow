@@ -48,6 +48,7 @@ gem 'rails_admin', '~> 1.4'
 gem 'whenever', '~> 0.10.0', require: false
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

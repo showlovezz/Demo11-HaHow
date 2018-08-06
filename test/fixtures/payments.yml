@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pledge_id: 1
+  merchant_order_no: MyString
+  end_price: 1
+  status: 1
+  paid_date: 2018-08-07 00:13:09
+  unpaid_payment_expire_date: 2018-08-07 00:13:09
+  transction_service_provider: 1
+  third_party_payment_id: MyString
+  time_stamp: MyString
+  payment_type: 1
+  bank_code: MyString
+  code_no: MyString
+  cvs_code: MyString
+  barcode_1: MyString
+  barcode_2: MyString
+  barcode_3: MyString
+  buyer_account_code: MyString
+  payment_type_charging_fee: MyString
+  credit_card_number: MyString
+  auth: MyString
+  inst: MyString
+  inst_first: MyString
+  inst_each: MyString
+
+two:
+  pledge_id: 1
+  merchant_order_no: MyString
+  end_price: 1
+  status: 1
+  paid_date: 2018-08-07 00:13:09
+  unpaid_payment_expire_date: 2018-08-07 00:13:09
+  transction_service_provider: 1
+  third_party_payment_id: MyString
+  time_stamp: MyString
+  payment_type: 1
+  bank_code: MyString
+  code_no: MyString
+  cvs_code: MyString
+  barcode_1: MyString
+  barcode_2: MyString
+  barcode_3: MyString
+  buyer_account_code: MyString
+  payment_type_charging_fee: MyString
+  credit_card_number: MyString
+  auth: MyString
+  inst: MyString
+  inst_first: MyString
+  inst_each: MyString

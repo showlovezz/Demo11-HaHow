@@ -9,6 +9,8 @@ class Project < ApplicationRecord
 	validates_numericality_of :goal, greater_than: 0
 	validate :valid_due_date?
 
+	mount_uploader :cover_image, CoverImageUploader
+
 	private
 
 	def valid_due_date?

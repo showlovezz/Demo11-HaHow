@@ -11,6 +11,8 @@ class Project < ApplicationRecord
 
 	mount_uploader :cover_image, CoverImageUploader
 
+	scope :is_now_on_sale, -> {self.is_published.where('due_date > ?', Time.now)}
+
 	private
 
 	def valid_due_date?

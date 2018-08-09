@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
 	before_action :is_login?, only: [:mpg]
-	before_action :get_pladge, only: [:mpg]
+	before_action :get_pledge, only: [:mpg]
 
 	def mpg
 	end
@@ -27,7 +27,7 @@ class PaymentsController < ApplicationController
 		end
 	end
 
-	def get_pladge
+	def get_pledge
 		@pledge = Pledge.not_paid.find_by(id: params[:pledge_id], user: current_user)
 
 		unless @pledge

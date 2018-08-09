@@ -4,7 +4,7 @@ class Pledge < ApplicationRecord
   
   has_one :payment
 
-  enum status: [:not_paid, :paid, :canceled]
+  enum status: [:not_selected_yet, :not_paid, :paid, :canceled]
 
   validates :project_name, :support_name, presence: true
   validates_numericality_of :support_price, greater_or_equal_to: 0

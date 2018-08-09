@@ -16,7 +16,7 @@ class PledgesController < ApplicationController
       quantity: params[:quantity]
       })
     
-    redirect_to mpg_payment_path(pledge: @pledge)
+    redirect_to mpg_payments_path(pledge_id: @pledge.id)
   end  
   
   private

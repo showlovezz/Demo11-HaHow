@@ -27,7 +27,7 @@ class PaymentsController < ApplicationController
   end
   
   def get_pledge
-    @pledge = Pledge.not_paid.find_by(id: params[:pledge_id], user: current_user)
+    @pledge = Pledge.not_selected_yet.find_by(id: params[:pledge_id], user: current_user)
     
     unless @pledge
       flash[:alert] = "沒有此贊助"

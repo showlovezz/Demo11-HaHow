@@ -2,6 +2,7 @@ class Project < ApplicationRecord
 	belongs_to :category
 	belongs_to :project_owner
 	has_many :project_supports
+	has_many :pledges, through: :project_supports
 
 	enum status: [:is_hidden, :is_published, :succeeded, :failed, :cancel]
 
@@ -12,6 +13,10 @@ class Project < ApplicationRecord
 	mount_uploader :cover_image, CoverImageUploader
 
 	scope :is_now_on_sale, -> {self.is_published.where('due_date > ?', Time.now)}
+
+	def seconds_left
+		due_date.to_i - Time.now.to_i
+	end
 
 	private
 

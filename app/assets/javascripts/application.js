@@ -16,3 +16,8 @@
 //= require bootstrap-sprockets
 //= require activestorage
 //= require_tree .
+
+$(function(){
+  countdown();
+  setInterval("countdown()", 1000);
+})

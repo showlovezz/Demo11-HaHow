@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">
+      類別： <%= @category.name %>
+    </h1>
+  </div>
+</div>
+<div class="container">
+  <%= render 'projects/card_list', projects: @projects %>
+</div>
+

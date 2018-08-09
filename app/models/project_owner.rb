@@ -1,6 +1,7 @@
 class ProjectOwner < ApplicationRecord
 	belongs_to :user
-	has_one :project
+  
+  has_many :projects
 
-	mount_uploader :cover_image, CoverImageUploader
+  mount_uploader :cover_image, CoverImageUploader
 end

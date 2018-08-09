@@ -1,7 +1,7 @@
 class Category < ApplicationRecord
-	enum status: [:is_hidden, :is_published]
-
 	has_many :projects
+  
+  enum status: [:is_hidden, :is_published]
 
-	validates :name, presence: true
+  validates :name, presence: true
 end

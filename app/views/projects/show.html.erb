@@ -13,11 +13,15 @@
               <%= @project.name %>
             </h5>
             <div class="card-text">
-              <h3>贊助目標: NT$ <%= @project.goal %></h3>
+              <p><b>已募得金額</b></p>
+              <h2 style="color: red;">
+                 NT$ <%= @project.paid_pledges_amounts%>
+              </h2>
+              <h5>贊助目標: NT$ <%= @project.goal %></h5>
               <br/>
               <p style="color: red;" class="seconds_countdown" data-seconds="<%= @project.seconds_left %>">  
               </p>
-              <br/>
+              <p><b><%= @project.status_to_string %></b></p>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: <%= "#{@percentage}%" %>;" aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100">
                   <% unless @percentage == 0.0 %>
@@ -42,14 +46,13 @@
         <div class="col-12 col-md-4">
           <% @project_supports.each do |project_support| %>
             <section>
-              <%= form_tag pledge_path, method: :post do %>
+              <%= form_tag pledges_path, method: :post do %>
               <h3><%= project_support.name %></h3>
               <h5>NT$ <%= project_support.price%> / 每單位</h5>
               <div>
                 <%= project_support.description %>
               </div>
-              <input type="hidden" name="project_support_id" value="<%= project_support.id %>">
-
+              <input type="hidden" name="id" value="<%= project_support.id %>">
               <div class="form-group">
                 <label for="quantity">贊助數量</label>
                 <input type="number" class="form-control" id="quantity" name="quantity" placeholder="1 ~ 10" max="10" min="1" value="1">

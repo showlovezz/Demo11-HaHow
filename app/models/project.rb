@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-	belongs_to :project_owner
+  belongs_to :project_owner
   belongs_to :category
   
   has_many :project_supports
@@ -30,6 +30,29 @@ class Project < ApplicationRecord
   
   def percentage_of_reaching_goal
     paid_pledges_amounts.to_f / goal.to_f
+  end
+  
+  def update_status_if_reaching_goal!
+    if self.is_published? && (self.percentage_of_reaching_goal.to_i >= 1)
+      self.succeeded!
+    end
+  end
+  
+  def status_to_string
+    case status_before_type_cast
+    when Project.statuses[:is_hidden]
+      return "尚未開始"
+    when Project.statuses[:is_published]
+      return "募資中"
+    when Project.statuses[:succeeded]
+      return "募資已成功"
+    when Project.statuses[:failed] 
+      return "募資失敗"
+    when Project.statuses[:cancel] 
+      return "募資已取消"
+    else
+      return "狀態未明"
+    end
   end
   
   def seconds_left

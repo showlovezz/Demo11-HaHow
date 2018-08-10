@@ -17,10 +17,17 @@ Rails.application.routes.draw do
   resources :projects, only: [:show] do
   end
 
-  resources :pledges, only: [:show] do
+  resources :pledges, only: [:create] do
   end
 
   resources :payments, only: [:show] do
+    collection do
+      get :mpg
+      get :canceled
+      post :notify
+      post :paid
+      post :not_paid_yet
+    end
   end
 
 end

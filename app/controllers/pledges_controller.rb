@@ -1,5 +1,5 @@
 class PledgesController < ApplicationController
-	# 可以想成是Order 訂單頁面，只是換一個名稱
+  # 可以想成是Order 訂單頁面，只是換一個名稱
   # 募資網站 -> 贊助Pledge
   # 購物網站 -> 訂單Order
   
